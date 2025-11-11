@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>遥感场景生成系统</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <span class="navbar-logo">遥感场景生成系统</span>
+    </div>
+    <ul class="navbar-right">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#introduction">背景介绍</a></li>
+      <li><a href="#innovation">特色创新</a></li>
+      <li><a href="#showcase">效果展示</a></li>
+      <li><a href="#experience">体验入口</a></li>
+    </ul>
+  </nav>
+
+
+<!-- 首页背景图片 -->
+<section id="home" class="home">
+  <div class="header-img-container">
+    <img src="home.jpg" alt="遥感场景生成背景" class="header-img">
+    <h1 class="header-title">主动式生成，遥感新世态</h1>
+    <div class="start-button-container">
+      <!-- 修改按钮，添加锚点跳转 -->
+      <button id="startButton">开始体验</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- 背景介绍 -->
+  <section id="introduction" class="section">
+    <div class="section-header">
+    <h2>背景介绍</h2>
+    </div>
+    <div class="section-content">
+      <div class="text-content">
+        <p>遥感图像作为关键地理空间数据源，在农业监测、城市规划、灾害响应等领域具有不可替代的作用。</p>
+        <p>传统数据获取方式面临成本高昂、更新周期长、极端场景采集困难等瓶颈。</p>
+        <p>扩散模型凭借其稳定的训练过程和卓越的生成质量，为突破这些限制提供了创新解决方案。该技术能够模拟不同季节、天气和光照条件的变化，生成多样化的仿真数据，特别是针对灾害场景和罕见地物类型等长尾样本，有效增强模型的泛化能力，实现"主动式"数据供给，显著提升遥感技术在下游任务中的应用效果。</p>
+      </div>
+      <div class="image-content">
+        <img src="p1.jpg" alt="背景介绍图片">
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 特色创新 -->
+  <section id="innovation" class="section">
+    <div class="section-header">
+      <h2>特色创新</h2>
+    </div>
+    <div class="innovation-boxes">
+      <div class="innovation-box">
+        <h3>高效的图像生成模型</h3>
+        <p>采用先进的深度学习模型和高效的微调技术，能够快速生成高质量的遥感场景。</p>
+      </div>
+      <div class="innovation-box">
+        <h3>用户自定义生成机制</h3>
+        <p>系统支持用户提供文本和布局描述来生成个性化遥感场景。</p>
+      </div>
+      <div class="innovation-box">
+        <h3>突破性数据生成能力</h3>
+        <p>支持模拟海洋、城市、农田等特定场景，有效弥补遥感数据采集难、更新慢的不足。</p>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- 效果展示模块 -->
+<section id="showcase" class="section">
+    <div class="section-header">
+      <h2>效果展示</h2>
+    </div>
+
+    <!-- 大图 + 文字 -->
+    <div class="showcase-main">
+        <div class="showcase-main-image">
+            <img src="example.png" alt="示例效果图">
+        </div>
+        <div class="showcase-main-text">
+            <p>左侧展示的是模型生成的整体效果图。
+                我们研发的遥感图像生成系统在基于布局约束与文字语义输入的多模态生成性能方面已取得显著突破。
+                用户仅需输入简要的布局草图和文本描述，系统即可生成符合空间逻辑且语义一致的高质量遥感图像。</p>
+        </div>
+    </div>
+
+
+    <!-- 文字 -->
+    <div class="showcase-images-text">
+        <p>我们的系统通过引入 LoRA 微调技术，实现了能够在不显著增加模型参数的情况下，有效适应遥感图像的特点。</p>
+        <p>下方展示的是针对同一张布局图和相同的文本输入，分别生成的普通图像和遥感图像。对比可以发现，我们生成的遥感图像清晰合理，且具有显著的遥感特性。</p>
+    </div> 
+
+
+    <!-- 原有的三张效果展示图 -->
+    <div class="showcase-images"> 
+      <div class="showcase-item">
+        <img src="image1.png" alt="示例1">
+        <p>布局模板</p>
+      </div>
+      <div class="showcase-item">
+        <img src="image2.png" alt="示例2">
+        <p>生成的普通图像</p>
+      </div>
+      <div class="showcase-item">
+         <img src="image3.png" alt="示例3">
+         <p>生成的遥感图像</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- 体验入口内容 -->
+  <section id="experience" class="experience-section">
+    <div class="section-header">
+      <h2>体验入口</h2>
+      <p>上传布局图像并输入描述文本，生成您专属的遥感场景</p>
+    </div>
+
+    <div class="experience-container">
+      <!-- 输入区域 -->
+      <div class="input-area">
+        <div class="upload-box">
+          <h3>上传布局图像</h3>
+          <div class="upload-container" id="uploadContainer">
+            <div class="upload-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <p>点击或拖拽图像到此处</p>
+              <span>支持 JPG、PNG 格式，最大 5MB</span>
+            </div>
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <span id="fileName"></span>
+                <button class="remove-btn" id="removeImage">×</button>
+            </div>
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+          </div>
+        </div>
+
+        <div class="text-input">
+          <h3>场景描述</h3>
+          <textarea id="sceneDescription" placeholder="请输入对遥感场景的文字描述"></textarea>
+          <div class="input-tips">
+            <p>提示：描述越详细，生成效果越好</p>
+          </div>
+        </div>
+
+        <button id="generateBtn" class="generate-btn" disabled>生成遥感场景</button>
+      </div>
+
+      <!-- 输出区域 -->
+      <div class="output-area">
+        <h3>生成结果</h3>
+        <div class="result-container">
+          <div class="loading-state" id="loadingState" style="display: none;">
+            <div class="spinner"></div>
+            <p>正在生成中，请稍候...</p>
+          </div>
+          
+          <div class="result-content" id="resultContent" style="display: none;">
+            <div class="comparison">
+              <div class="comparison-item">
+                <h4>输入布局</h4>
+                <img id="inputImageResult" src="" alt="输入布局">
+              </div>
+              <div class="comparison-item">
+                <h4>生成结果</h4>
+                <img id="generatedImage" src="" alt="生成的遥感场景">
+              </div>
+            </div>
+            <div class="result-actions">
+              <button id="downloadBtn" class="download-btn">下载图像</button>
+              <button id="regenerateBtn" class="regenerate-btn">重新生成</button>
+            </div>
+          </div>
+
+          <div class="empty-state" id="emptyState">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <p>上传图像并输入描述后，点击生成按钮</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
