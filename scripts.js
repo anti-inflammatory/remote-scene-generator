@@ -193,7 +193,7 @@ function generateImage() {
   formData.append('description', sceneDescription.value.trim());  // 文字描述
   
   // 发送到后端 API
-  fetch('http://125.217.95.75:5000/generate', {  // 替换后端 API 地址！！！！！！！
+  fetch('http://125.217.95.75/generate', {  // 替换后端 API 地址！！！！！！！
     method: 'POST',
     body: formData,
   })
@@ -236,5 +236,6 @@ function generateImage() {
     if (emptyState) emptyState.style.display = 'flex';
   });
 }
+
 
 });
